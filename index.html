@@ -1,0 +1,310 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+    <!-- for the navbar -->
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><h1>JOSH<span>UA.</span></h1></a>
+                </div>
+
+                <ul id="sidemenu">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fas fa-times times-icon" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars menu-icon" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ................for the responsiveness of the menu..................... -->
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+
+
+    <!-- first section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello it's Me</h3>
+            <h1>Agreen Augustine Joshua</h1>    
+            <h3>And I'm a <span class="text"></span></h3>
+            <p>I'm a Web Developer And a Web Designer With Extensive 2years Of Experience.<br>
+            My Job Is To Create Dynamic Webpages And Webdesigns I'm a Frontend And Backend Developer.</p>
+            <div class="home-sci">
+                <a href="" style="--1:5"><i class='bx bxl-facebook'></i></a>
+                <a href="" style="--1:7"><i class='bx bxl-instagram'></i></a>
+                <a href="" style="--1:4"><i class='bx bxl-whatsapp'></i></a>
+                <a href="" style="--1:1"><i class='bx bxl-tiktok'></i></a>
+            </div>
+            <a href="" class="btn-box">More About Me</a>
+        </div>
+        <div class="image-container">
+           <a href=""><img src="images/dp.jpg" alt="Rounded Shining Picture"></a>
+          </div>
+    </section>    
+
+    <!-- .......................about section......................... -->
+    <section>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about-img.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                      <p>
+                        I Am passionate web developer and designer with a keen eye for aesthetics and <b>functionality, 
+                            specializing</b> in creating visually appealing and user-friendly <b>websites</b> using the latest technologies
+                             like <b>HTML, CSS, JavaScript, and Bootstrap.</b> My goal is to craft seamless digital experiences that engage users and drive success for businesses. Whether it's coding a responsive layout or designing intuitive interfaces, dedication to bringing ideas to life on the web is My top <b>priority.</b>
+                      </p>
+
+                      <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                      </div>
+
+                      <div class="tab-contents active-tab" id="skills">
+                      <ul>
+                        <li><span>UI/UX Designer</span><br>Desigining User Interface/User Experience</li>
+                        <li><span>Frontend Developer</span><br>Designing the Visual Interactive Element</li>
+                        <li><span>Backend Developer</span><br> Work On The Server Side Of an Application</li>
+                      </ul>
+                    </div>
+                      <div class="tab-contents" id="experience">
+                      <ul>
+                        <li><span>2024 - current</span><br>UI/UX Design Traning at Skill Boost Limited Africa</li>
+                        <li><span>2023/05/1 - 2023/08/04</span><br>Project Collabration With Ausbless Construction Site</li>
+                        <li><span>2022/02/3 - 2023/03/17</span><br> Mentorship at Sapphires Tech</li>
+                      </ul>
+                    </div>
+                      <div class="tab-contents" id="education">
+                      <ul>
+                        <li><span>2021</span><br>UI/UX Traning Certificate From skill Boost Limited Africa</li>
+                        <li><span>2023</span><br>FullStack Degree In Web Development From Skill Boost Limited Africa</li>
+                        <li><span>2024</span><br>Diploma In Computer Science From Ignatius Ajuru University</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- for the onclick event -->
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+
+                  <!-- ................services.............................. -->
+<section>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-crop"></i>
+                    <h2>Web Designer</h2>
+                    <p>
+                        Offering professional web design services that combine aesthetics with functionality. Our designs are tailored to create visually stunning, user-friendly websites That are Responsive on all Screen Devices.
+                      </p>
+                      <a href="portfolio.html">Learn More</a>
+                </div>
+
+
+                <div>
+                    <i class="fas fa-code"></i> 
+                    <h2>Frontend Developer</h2>
+                      <p>
+                        Specializing in front-end development, we bring your digital ideas to life with clean, efficient code, Our expertise includes crafting responsive, interactive user interfaces.
+                      </p>
+                      <a href="portfolio.html">Learn More</a>
+                </div>
+
+
+                <div>
+                    <i class="fas fa-network-wired"></i>
+                    <h2>Backend Developer</h2>
+                    <p>
+                        Our back-end development services ensure your website or application is fast, secure, and scalable. We specialize in server-side logic, database management, and API integrations</p>
+                      <a href="portfolio.html">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--.........................portfolio........................ -->
+<section>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+            <div class="work">
+                <img src="images/ecomerce.jpg" alt="">
+                <div class="layer">
+                    <h3>E-commerce Site</h3>
+                    <p>We build powerful e-commerce platforms that enhance your online sales experience.</p>
+                    <a href=""><i class="fas fa-link"></i> </a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/construction.jpg" alt="">
+                <div class="layer">
+                    <h3>Construction Site</h3>
+                    <p>We provide comprehensive construction services, from initial planning and design to final build and project management.</p>
+                    <a href=""><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/resturant picture.jpg" alt="">
+                <div class="layer">
+                    <h3>Resturant</h3>
+                    <p>We create engaging restaurant websites that showcase your menu, ambiance, and special offers.</p>
+                    <a href=""><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="btn">See More</a>
+    </div>
+    </div>
+</section>
+
+<!--.............................. contact me................................. -->
+
+<section>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fas fa-envelope"></i>   joshuaaugustine477@gmail.com</p>
+                    <p>  <i class="fas fa-phone"></i>     09037930687</p>
+                   
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-whatsapp"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="c:\Users\USER\Desktop\EXPRESSION OF INTEREST TO FINANCE AND CONSTRUCT GOVERNMENT APPROVED PROJECTS- Rivers State,.pdf" download  class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Fill Your Name" required>
+                        <input type="email" name="Email" placeholder="Fill Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright <i class="far fa-copyright"></i> This Website Is <b>Designed By </b>Joshua Agreen Augustine</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+      
+      <!-- <div class="counter" id="counter-section">
+        <div class="count-item">
+            <i class="fas fa-smile"></i>
+            <h2 class="count" data-target="50">0</h2>
+            <p>Happy Customers</p>
+        </div>
+        <div class="count-item">
+            <i class="fas fa-project-diagram"></i>
+            <h2 class="count" data-target="80">0</h2>
+            <p>Projects Done</p>
+        </div>
+        <div class="count-item">
+            <i class="fas fa-clock"></i>
+            <h2 class="count" data-target="100">0</h2>
+            <p>Hours of Support</p>
+        </div>
+    </div> -->
+    
+    
+
+
+
+
+   
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="portfolio.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwLQRBY3IEoQGWTBsXjnAOiEBLb9_yfM2woB7udhGUvc1b7CJJIpMYXIYMOGvpSgocC/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Thanks Message Sent" 
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },3000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
